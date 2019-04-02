@@ -4,9 +4,9 @@ import TestContext from "./test-context";
 const GlobalState = props => {
   //const [data, changeData] = useState(1);
   const [state, dispatch] = useReducer(testReducer, { num: 1 }); //data is a obj and initialize data={num:1}
-  const testFunction = data => {
+  const testFunction = () => {
     //and the data is whole store =state
-    dispatch({ type: "ADD_NUM", num: data });
+    dispatch({ type: "ADD_NUM" });
   };
   //console.log(data);
   return (

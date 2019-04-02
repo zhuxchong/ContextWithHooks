@@ -1,6 +1,6 @@
 export const ADD_NUM = "ADD_NUM";
-const testFunction = (data, state) => {
-  return { ...state, num: data + 1 };
+const testFunction = state => {
+  return { ...state, num: state.num + 1 };
 };
 
 export const testReducer = (state, action) => {
@@ -9,7 +9,7 @@ export const testReducer = (state, action) => {
       //console.log(state);
       //state=>internal data store
       //action=>data change and action type
-      return testFunction(action.num, state);
+      return testFunction(state);
     default:
       return state;
   }
